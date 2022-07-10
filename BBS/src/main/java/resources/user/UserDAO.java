@@ -10,7 +10,7 @@ public class UserDAO {
 	private PreparedStatement pstmt;
 	private ResultSet rset;
 	
-	public UserDao() {
-		String dbUrl = "jdbc:oracle:localhost"
-	}
+//	public UserDao() {
+//		String dbUrl = "jdbc:oracle:localhost"
+//	}
 }
