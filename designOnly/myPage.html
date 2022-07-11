@@ -20,7 +20,9 @@
     }
     .btn-close{
       filter: invert(91%) sepia(92%) saturate(1%) hue-rotate(88deg) brightness(108%) contrast(99%);
-      
+      position: absolute;
+      right: 30px;
+      top:50px;
     }
 
     .offcanvas-header{
@@ -29,10 +31,10 @@
     }
 
     #logo{
-      width: 80%;
+      width: 60%;
       margin: 10px;
-      margin-top: -15px;
-      margin-left: -90px;
+      margin-top: -20px;
+      margin-left: 0px;
     }
 
     #login-btn{
@@ -42,11 +44,11 @@
       border : none;
       padding: 10px;
       border-radius: 15px;
-
+      box-shadow : 0px 0px 2px rgb(0, 0, 0);
     }
 
     #login-btn:hover{
-      box-shadow : 0px 0px 5px rgb(0, 0, 0);
+      background-color: rgb(234, 244, 254);
     }
 
     .btnMypage {
@@ -56,6 +58,7 @@
       background-color : #0082FF;
     }
     .col{
+      margin-top: -16px;
       color: black;
       font-size: 13px;
       text-decoration: none;
@@ -63,10 +66,11 @@
       justify-content: center;
       text-align: center;
       padding: 10px;
+      padding-bottom: 20px;
     }
 
     .col:hover{
-      background-color: aliceblue;
+      background-color: rgb(234, 244, 254);
       color: black;
       font-size: 13px;
       text-decoration: none;
@@ -87,6 +91,16 @@
       margin : 12px;
     }
 
+    #welcome {
+      background-color: rgb(234, 244, 254);
+      display: grid;
+      width: 100vh;
+      height :50px;
+      margin-top: 10px;
+      margin-left: -15px;
+      text-align: center;
+      justify-content: center;
+    }
     
 
     </style>
@@ -100,22 +114,27 @@
     <button type="button" id="login-btn">&nbsp;&nbsp;로그인&nbsp; | &nbsp;회원가입&nbsp;</button>
   </div>
   <div class="offcanvas-body">
+
     <div class="row">
         <a class="col" href=""><img src="resources/icon/reserve.svg" id="icon1"><br><span>예약조회</span></a>
         <a class="col" href=""><img src="resources/icon/cart.svg" id="icon2"><br><span class="pp">장바구니</span></a>
         <a class="col" href=""><img src="resources/icon/heart.svg" id="icon3"><br><span class="pp">위시리스트</span></a>
-      </div>
+    </div>
+
+    <div id="welcome">
+      WELCOME!
+    </div>
+
   </div>
 </div>
 
 
-  <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
-    <div class="btnMypage"></div>
-    <div class="btnMypage"></div>
-    <div class="btnMypage"></div>
-  </button>
+<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+  <div class="btnMypage"></div>
+  <div class="btnMypage"></div>
+  <div class="btnMypage"></div>
+</button>
 
-</div>
 
 </body>
 </html>
