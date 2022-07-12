@@ -10,6 +10,12 @@
 
   <style>
 
+
+    /*------------------------------------------ blue header ------------------------------------------*/
+    .offcanvas-body {
+      padding : 0;
+    }
+
     .offcanvas-header {
       display: grid;
       background-color : #0082FF;
@@ -44,13 +50,15 @@
       border : none;
       padding: 10px;
       border-radius: 15px;
-      box-shadow : 0px 0px 2px rgb(0, 0, 0);
+      box-shadow : 0px 0px 3px rgb(0, 0, 0, 0.5);
     }
 
     #login-btn:hover{
       background-color: rgb(234, 244, 254);
     }
 
+
+    /*------------------------------------------ 예약 ~ 위시 ------------------------------------------*/
     .btnMypage {
       width: 35px;
       height: 5px;
@@ -65,8 +73,8 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 10px;
-      padding-bottom: 20px;
+      padding: 30px;
+
     }
 
     .col:hover{
@@ -87,22 +95,89 @@
     }
 
     #icon2, #icon3 {
-      width: 38px;
+      width: 36px;
       margin : 12px;
     }
+
+    /*------------------------------------------ welcome ------------------------------------------*/
 
     #welcome {
       background-color: rgb(234, 244, 254);
       display: grid;
-      width: 100vh;
-      height :50px;
-      margin-top: 10px;
-      margin-left: -15px;
-      text-align: center;
-      justify-content: center;
+      height: 70px;
+      width: 100%;
+      z-index: -1;
+      margin-top: 30px;
+      color: #0082FF;
     }
     
+    #welcome span {
+      margin : auto;
+    }
 
+
+    /*------------------------------------------ 공지, 자주묻는질문 ------------------------------------------*/
+        * {box-sizing: border-box}
+  
+
+    /* Style the tab */
+    .tab {
+      float: left;
+      background-color: white;
+      width: 100%;
+      height: 140px;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+      display: block;
+      background-color: inherit;
+      color: black;
+      padding: 22px 16px;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color:  #f1f1f1;
+      font-weight: bold;
+    }
+
+    /* Create an active/current "tab button" class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+ 
+
+/*------------------------------------------ footer ------------------------------------------*/
+    .footer{
+      display: grid;
+      background-color : #0082FF;
+      height: 100px;
+      width: 100%;
+      color: white;
+      position: absolute;
+      bottom: 2px ;
+      text-decoration: none;
+      border : none;
+    }
+
+    .footer:hover{
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .footer span{
+      margin: auto;
+    }
+
+    
     </style>
 </head>
 <body>
@@ -114,7 +189,6 @@
     <button type="button" id="login-btn">&nbsp;&nbsp;로그인&nbsp; | &nbsp;회원가입&nbsp;</button>
   </div>
   <div class="offcanvas-body">
-
     <div class="row">
         <a class="col" href=""><img src="resources/icon/reserve.svg" id="icon1"><br><span>예약조회</span></a>
         <a class="col" href=""><img src="resources/icon/cart.svg" id="icon2"><br><span class="pp">장바구니</span></a>
@@ -122,8 +196,23 @@
     </div>
 
     <div id="welcome">
-      WELCOME!
+      <span>WELCOME!</span>
     </div>
+
+
+    <div class="tab">
+      <button class="tablinks">공지사항</button>
+      <button class="tablinks">자주묻는질문</button>
+      <button class="tablinks">1:1문의</button>
+      <button class="tablinks slide">내 글 확인</button>
+      <button class="tablinks slide">알림</button>
+      <button class="tablinks">회원정보</button>
+
+    </div>
+
+
+    <button class="footer" href=""><span>관리자페이지로 이동</span></button>
+    
 
   </div>
 </div>
