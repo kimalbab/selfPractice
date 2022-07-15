@@ -16,9 +16,25 @@
       padding : 0;
     }
 
+    body{
+      font-family: 'Noto Sans KR', sans-serif;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    
+    .offcanvas-header #logo{
+      color : white;
+      font-weight: 600;
+      font-size: 40px;
+      position: absolute;
+      top:30px;
+      left: 30px;
+
+    }
+
     .offcanvas-header {
       display: grid;
-      background-color : #0082FF;
+      background-color : #0D6EFD;
       height: 200px;
       width: 100%;
       z-index: -1;
@@ -37,24 +53,26 @@
     }
 
     #logo{
-      width: 60%;
+      width: 50%;
       margin: 10px;
       margin-top: -20px;
       margin-left: 0px;
     }
 
+
     #login-btn{
       background-color: white;
-      color: #0082FF;
+      color: #0D6EFD;
       font-weight: bold;
       border : none;
       padding: 10px;
       border-radius: 15px;
       box-shadow : 0px 0px 3px rgb(0, 0, 0, 0.5);
+      margin-bottom : -100px;
     }
 
     #login-btn:hover{
-      background-color: rgb(234, 244, 254);
+      background-color:#E7F1FF;
     }
 
 
@@ -63,7 +81,7 @@
       width: 35px;
       height: 5px;
       margin: 6px 0;
-      background-color : #0082FF;
+      background-color : #0D6EFD;
     }
     .col{
       margin-top: -16px;
@@ -78,7 +96,7 @@
     }
 
     .col:hover{
-      background-color: rgb(234, 244, 254);
+      background-color:#E7F1FF;
       color: black;
       font-size: 13px;
       text-decoration: none;
@@ -102,13 +120,14 @@
     /*------------------------------------------ welcome ------------------------------------------*/
 
     #welcome {
-      background-color: rgb(234, 244, 254);
+      background-color:#E7F1FF;
       display: grid;
       height: 70px;
       width: 100%;
       z-index: -1;
-      margin-top: 30px;
-      color: #0082FF;
+      margin-top: 40px;
+      color: #0D6EFD;
+      font-weight: bold;
     }
     
     #welcome span {
@@ -155,39 +174,10 @@
 
  
 
-
-
-/*------------------------------------------ 큰 회원가입------------------------------------------*/
-
-    .big-signin{
-      display: grid;
-      height: 230px;
-      width: 100%;
-
-    }
-
-    .big-signin-btn{
-      font-size: 16px;
-      color: #0082FF;
-      box-shadow : 0px 0px 10px rgb(0, 129, 255, 0.3);
-      padding : 40px 60px 40px 60px;
-      border-radius: 30px;
-      margin: auto;
-      margin-top: 50px;
-    }
-
-    .big-signin-btn:hover{
-      font-weight: bold;
-      color: #0082FF;
-      box-shadow : 0px 0px 10px rgba(145, 199, 253, 0.3);
-      
-    }
-
-
 /*------------------------------------------ footer ------------------------------------------*/
-    .footer{
+  .footer{
       display: grid;
-      background-color : #0082FF;
+      background-color : #0D6EFD;
       height: 100px;
       width: 100%;
       color: white;
@@ -206,6 +196,69 @@
       margin: auto;
     }
 
+
+    /*------------------------------------------ 메뉴바들 ------------------------------------------*/
+
+
+    .accordion-button:hover{
+      background-color:#E7F1FF;
+    }
+
+    
+    .accordion-button::after {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: auto;
+    content: "";
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    transition: transform .2s ease-in-out;
+  }
+
+
+  .col{
+    border: none;
+    background-color: white;
+    
+  }
+
+  .col:hover{
+    background-color: #EEEEEE;
+  }
+  
+  .accordion-body {
+    padding: 0px;
+  }
+
+  /*------------------------------------------ 큰 회원가입------------------------------------------*/
+
+  .big-signin{
+      display: grid;
+      height: 230px;
+      width: 100%;
+
+    }
+
+    .big-signin-btn{
+      font-size: 16px;
+      color:  #0D6EFD;
+      box-shadow : 0px 0px 10px rgb(0, 129, 255, 0.3);
+      padding : 40px 60px 40px 60px;
+      border-radius: 30px;
+      margin: auto;
+      margin-top: 50px;
+    }
+
+    .big-signin-btn:hover{
+      font-weight: bold;
+      color:  #0D6EFD;
+      box-shadow : 0px 0px 10px rgba(145, 199, 253, 0.3);
+      
+    }
+
+
     
     </style>
 </head>
@@ -213,7 +266,7 @@
 
 <div class="offcanvas offcanvas-end" id="demo">
   <div class="offcanvas-header">
-    <img src="resources/logo/logo.png" id="logo">
+    <div id="logo">SPACEFIT</div>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
     <button type="button" id="login-btn">&nbsp;&nbsp;로그인&nbsp; | &nbsp;회원가입&nbsp;</button>
   </div>
@@ -228,21 +281,46 @@
       <span>WELCOME!</span>
     </div>
 
+    <div>
+      
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              공지사항
+            </button>
+          </h2>
+        </div>
 
-    <div class="tab">
-      <button class="tablinks">공지사항</button>
-      <button class="tablinks">자주묻는질문</button>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              자주묻는질문
+            </button>
+          </h2>
+        </div>
+
+      </div>
+
+      <div class="big-signin">
+        <button type="button" class="btn big-signin-btn">스페이스 클라우드의<br> 모든 혜택을 누릴 수 있도록<br> 회원가입 해 보세요!</button>
+      </div>
+  
+  
+  
+      <button class="footer" href=""><span>관리자페이지로 이동</span></button>
+      
+  
     </div>
+  </div>
 
-    <div class="big-signin">
-      <button type="button" class="btn big-signin-btn">스페이스 클라우드의<br> 모든 혜택을 누릴 수 있도록<br> 회원가입 해 보세요!</button>
-    </div>
 
-    <button class="footer" href=""><span>관리자페이지로 이동</span></button>
-    
+      
+
 
   </div>
-</div>
+
+
 
 
 <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
