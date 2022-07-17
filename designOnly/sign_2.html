@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+
+        .card-body {
+            box-shadow : 0px 0px 12px rgb(13, 109, 253, 0.7);
+            border-radius: 15px;
+            width: 90%;
+            color:  #0D6EFD;
+            margin-bottom: 70px;
+        }
+
+
+        h4 {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        label {
+            display: block;
+        }
+
+        .inputs {
+            text-align: left;
+            margin-top: 10px;
+        }
+       
+        .inputs label{
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+
+        .inputs input{
+            margin-top: -1px;
+            margin-bottom: -7px;
+        }
+
+        .inputs span{
+            font-size: 8px;
+            font-weight: 400;
+            margin-left: 5px;
+        }
+
+        .account-input{
+            border : 1.5px solid #0D6EFD;
+            border-radius: 5px;
+            margin: 5px;
+            width: 100%;
+            height: 40px;
+            font-size: 13px;
+        }
+        
+        #userIdNo{
+            width: 100%;
+        }
+
+        .btn-primary {
+            margin: 5px;
+            margin-top: -2px;
+            width: 100%;
+        }
+
+        .btn-secondary {
+            margin: 5px;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .welcome {
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+    <section class="vh-100" style="background-color: white;">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+       
+                <div class="card-body p-5 text-center">
+                        <h4>스페이스핏 회원가입</h4>
+    
+                    
+                        <form class="sign-in" action="" post="table">
+                           <div class="inputs">
+                            <br>
+                                <label for="#userId">아이디</label>
+                                <input type="text" placeholder="아이디를 입력해주세요" class="account-input" id="userId">
+                                <span>아이디는 영문 소문자로 6자 이상 입력해주세요.</span>
+                            <br><br>
+                                <label for="#password">비밀번호</label>
+                                <input type="password" placeholder="비밀번호를 입력해주세요" class="account-input" id="password">
+                                <span>비밀번호는 영문 대소문자+숫자+특수문자로 10자 이상입니다.</span>
+                            <br><br>
+                                <label for="#password-check">비밀번호</label>
+                                <input type="password-check" placeholder="비밀번호를 입력해주세요" class="account-input" id="password-check">
+                                <span>비밀번호를 한번 더 입력해주세요.</span>
+                            <br><br>
+                                <label for="#userName">이름</label>
+                                <input type="text" placeholder="이름을 입력해주세요" class="account-input" id="userName">
+                            <br><br>
+                                <label for="#userIdNo">주민번호</label>
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <input type="text" placeholder="주민번호 입력" class="account-input" id="userIdNo">
+                                    </div>
+                                    &nbsp-
+                                    <div class="col-sm">
+                                        <input type="password" class="account-input" id="userIdNo">
+                                    </div>
+                                </div>
+                            <br><br>
+                                <label for="#phone">전화번호</label>
+                                <input type="text" placeholder="이름을 입력해주세요" class="account-input" id="phone" value="이미 휴대폰 인증받은 번호">   
+                           </div>
+                           <br><br>
+                        <hr>
+                        <span class="welcome">필수입력사항 입력 완료!</span>
+                        <div class="inputs">
+                        <br>
+                            <label for="#email">이메일</label>
+                            <input type="email" placeholder="이메일을 입력해주세요" class="account-input" id="email">
+                            <button class="btn btn-secondary">이메일 인증하기</button>
+                        <br><br>
+                            <label for="#recommendId">추천인 아이디</label>
+                            <input type="text" placeholder="추천인 아이디를 입력해주세요" class="account-input" id="recommendId">
+                            <span>추천해주시면 두분께 회원포인트 +30!</span>
+                        <br><br>
+                        </div>
+                           
+                        
+                           
+                        </form>
+                        <hr>
+                        <span class="welcome">짜잔 이제 확인만 하세요!<br></span>
+                        <button class="btn btn-primary" type="button">회원가입</button><br>
+                    </div>
+                    
+                </div>
+            
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+</html>
