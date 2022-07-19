@@ -364,7 +364,7 @@
 	      <div id="logo">SPACEFIT</div>
 	      <span class="close-box-collapse right-boxed bi bi-x"></span>
 	      
-	       <button type="button" id="login-btn"style="height: 50px; width: 220px;" onclick = "location.href = 'loginForm.jsp'">
+	       <button type="button" id="login-btn"style="height: 50px; width: 220px;" onclick="location.href='<%= contextPath %>/views/sign/loginForm.jsp' ">
 	         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;로그인&nbsp; | &nbsp;회원가입&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	       </button>
 	  
