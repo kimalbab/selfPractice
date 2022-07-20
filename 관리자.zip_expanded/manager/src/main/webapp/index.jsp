@@ -26,14 +26,11 @@
      body{
             color:  #0D6EFD;
         }
-
         .card-body {
             box-shadow : 0px 0px 12px rgb(13, 109, 253, 0.7);
             border-radius: 15px;
             width: 90%;
         }
-
-
         
     
  </style>
@@ -41,7 +38,6 @@
 <body>	
 		
 		<%@ include file="views/common/userMenubar.jsp" %>
-
         
 </body>
 </html>

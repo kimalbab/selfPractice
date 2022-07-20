@@ -1,28 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>   
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <style>
-
-        .card-body {
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<title>Space fit 회원가입</title>
+<style>
+		 .card-body {
             box-shadow : 0px 0px 12px rgb(13, 109, 253, 0.7);
             border-radius: 15px;
             width: 90%;
         }
 
 
-        h4 {
+        .signIn {
             font-weight: 600;
             font-size: 16px;
             color:  #0D6EFD;
@@ -100,32 +92,36 @@
             width: 100%;
         }
 
-        .welcome {
+        .already {
             font-size: 11px;
             color: #0D6EFD;
         }
-    </style>
+</style>
 </head>
 <body>
-    <section class="vh-100" style="background-color: white;">
+	<%@ include file="../common/userMenubar.jsp" %>
+	
+		<div style="height : 200px"></div>
+        
+       <section class="vh-100" style="background-color: white;">
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
        
                 <div class="card-body p-5 text-center">
                     <div class="phone-account">
-                        <h4>스페이스핏 회원가입</h4><br>
+                        <h4 class="signIn">스페이스핏 회원가입</h4><br>
                         <div class="agreement">
                     
                             <label for="agree_all">
                                 <input type="checkbox" name="agree_all" id="agree_all">
-                                <span>모두 동의합니다</span>
+                                <span>모두 동의합니다</span><br><br>
                             </label>
                                 
-                            <label for="agree" data-bs-toggle="collapse" data-bs-target="#demo1">
+                            <label for="agree" >
                                     <input type="checkbox" name="agree" value="1">
                                     <span>이용약관 동의<strong>(필수)</strong></span>
-                                    <div id="demo1" class="collapse">
+                                   
                                         <div class="agree-box">
                                             <h6>제1조(목적) </h6>
                                             <p>이 약관은 (유)내고향시푸드(전자거래 사업자)이 운영하는 홈페이지(이하 "쇼핑몰"이라 한다)에서 제공하는 인터넷 관련 서비스(이하 "서비스"라 한다)를 이용함에 있어 (유)내고향시푸드와 이용자의 권리·의무 및 책임사항을 규정함을 목적으로 합니다. </p>
@@ -335,14 +331,14 @@
                                             ① "쇼핑몰"과 이용자간에 발생한 전자거래 분쟁에 관한 소송은 민사소송법상의 관할법원에 제기합니다. 
                                             
                                             ② "쇼핑몰"과 이용자간에 제기된 전자거래 소송에는 한국법을 적용합니다. 
-                                            </div>
+                        
                                     </div>
                             </label>
                             
-                            <label for="agree" data-bs-toggle="collapse" data-bs-target="#demo2">
+                            <label for="agree" >
                                 <input type="checkbox" name="agree" value="2">
                                 <span>개인정보 수집, 이용 동의<strong>(필수)</strong></span>
-                                <div id="demo2" class="collapse">
+                            	 <div class="agree-box">
                                     개인정보보호법에 따라 스페이스핏에 회원가입 신청하시는 분께<br> 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적,<br> 개인정보의 보유 및 이용기간, 동의 거부권 및 동의 거부 시<br> 불이익에 관한 사항을 안내 드리오니<br>자세히 읽은 후 동의하여 주시기 바랍니다.
                                 </div>
                             </label>
@@ -350,7 +346,7 @@
                             <label for="agree" data-bs-toggle="collapse" data-bs-target="#demo3">
                                 <input type="checkbox" name="agree" value="3">
                                 <span>휴대폰 인증 이용약관 동의<strong>(필수)</strong></span>
-                                <div id="demo3" class="collapse">
+                               
                                     <div class="agree-box">
                                         휴대폰본인확인 서비스 이용약관
                                             (주) 드림시큐리티
@@ -430,12 +426,12 @@
                         </div>
                         <div class="phone message">
                             <input type="text" placeholder="핸드폰번호를 입력해주세요 (-제외)" class="account-input" id="phone"><br>
-                            <button type="submut" class="btn btn-secondary">인증번호 받기</button><br>
+                            <button type="submit" class="btn btn-secondary">인증번호 받기</button><br>
                             <input type="text" placeholder="인증번호를 입력해주세요" class="account-input" id="phone-message"><br>
-                            <button type="submut" class="btn btn-primary">확인</button><br>
+                            <button type="submit" class="btn btn-primary">확인</button><br>
                         </div>
                         <hr>
-                        <span class="welcome">인증을 축하드립니다! 거의 다 왔어요!</span>
+                        <span class="already">인증을 축하드립니다! 거의 다 왔어요!</span>
                         <button class="btn btn-primary" type="button">다음 단계로 이동</button><br>
                     </div>
                     
@@ -445,5 +441,8 @@
           </div>
         </div>
       </section>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
