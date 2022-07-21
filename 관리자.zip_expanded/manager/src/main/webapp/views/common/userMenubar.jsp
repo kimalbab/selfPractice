@@ -10,25 +10,32 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="<%= contextPath %>/resources/user/assets/img/favicon.png" rel="icon">
-  <link href="<%= contextPath %>/resources/user/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-  <!-- Vendor CSS Files -->
-  <link href="<%= contextPath %>/resources/user/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="<%= contextPath %>/resources/user/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="<%= contextPath %>/resources/user/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="<%= contextPath %>/resources/user/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="<%= contextPath %>/resources/user/assets/css/style.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link href="<%= contextPath %>/resources/user/assets/img/favicon.png" rel="icon">
+    <link href="<%= contextPath %>/resources/user/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="<%= contextPath %>/resources/user/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="<%= contextPath %>/resources/user/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<%= contextPath %>/resources/user/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="<%= contextPath %>/resources/user/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="<%= contextPath %>/resources/user/assets/css/style.css" rel="stylesheet">
+  
+    <!-- =======================================================
+    * Template Name: EstateAgency - v4.8.0
+    * Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+    
+    <!-- 내 자바스크립트(수업용), 구글아이콘 -->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  <!--cdn방식 연동-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   
 
   
@@ -336,9 +343,9 @@
 	    </div>
 	    <div class="offcanvas-body">
 	      <div class="row iconRow">
-	        <a class="col iconCol" href=""><img src="<%= contextPath %>/resources/user/resources/icon/reserve.svg" id="icon1"><br><span>예약조회</span></a>
-	        <a class="col iconCol" href=""><img src="<%= contextPath %>/resources/user/resources/icon/cart.svg" id="icon2"><br><span class="pp">장바구니</span></a>
-	        <a class="col iconCol" href=""><img src="<%= contextPath %>/resources/user/resources/icon/heart.svg" id="icon3"><br><span class="pp">위시리스트</span></a>
+	        <a class="col iconCol" href=""><img src="<%= contextPath %>/resources/user/img/icon/reserve.svg" id="icon1"><br><span>예약조회</span></a>
+	        <a class="col iconCol" href=""><img src="<%= contextPath %>/resources/user/img/icon/cart.svg" id="icon2"><br><span class="pp">장바구니</span></a>
+	        <a class="col iconCol" href=""><img src="<%= contextPath %>/resources/user/img/icon/heart.svg" id="icon3"><br><span class="pp">위시리스트</span></a>
 	      </div>
 	  
 	      <div id="welcome">
@@ -547,20 +554,15 @@
 
 
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="<%= contextPath %>/resources/user/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="<%= contextPath %>/resources/user/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="<%= contextPath %>/resources/user/assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="<%= contextPath %>/resources/user/assets/js/main.js"></script>
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  <!--cdn방식 연동-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
+<div id="preloader"></div>
+	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+	
+	<!-- Vendor JS Files -->
+	<script src="<%= contextPath %>/resources/user/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="<%= contextPath %>/resources/user/assets/vendor/swiper/swiper-bundle.min.js"></script>
+	<script src="<%= contextPath %>/resources/user/assets/vendor/php-email-form/validate.js"></script>
+	
+	<!-- Template Main JS File -->
+	<script src="<%= contextPath %>/resources/user/assets/js/main.js"></script>
 </body>
 </html>

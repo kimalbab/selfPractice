@@ -6,48 +6,49 @@
 <meta charset="UTF-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <title>Space fit 회원가입</title>
+
 <style>
 		 .card-body {
-            box-shadow : 0px 0px 12px rgb(13, 109, 253, 0.7);
+            box-shadow : 0px 0px 12px rgb(13, 109, 253, 0.4);
             border-radius: 15px;
             width: 90%;
         }
-
-
         .signIn {
             font-weight: 600;
             font-size: 16px;
             color:  #0D6EFD;
         }
-
+        
+        
+         .h4SignIn {
+	         font-weight: 600;
+	         font-size: 16px;
+	         color:  #0D6EFD;
+	      }
+	      
+	      
         label {
             display: block;
         }
-
        .agreement{
             font-size: 13px;
             color:  #0D6EFD;
+            width: 100%;
        }
 
-       .collapse{
-            font-size: 10px;
-            color:  black;
-       }
     
-       .agree-box {
-            width:100%;
+       .agreeBox {
+            width: 400px;
             height:80px;
             overflow:auto;  
             border:1px solid #0D6EFD;
             padding: 0 0.5em;
             border-radius: 10px;
+            display : none;
+            font-size: 10px;
+            color:  black;
             }
-
-
-        .btn-primary {
-            margin: 5px;
-            width: 80%;
-        }
+            
     
         .phone .box{
             width: 100%;
@@ -55,7 +56,6 @@
             background-color: #EEEEEE;
             border-radius: 10px;
             font-size: 13px;
-
         }
        
         .picon{
@@ -65,11 +65,9 @@
         .material-icons{
             margin-top: 5px;
         }
-
         .phone .message {
             margin-top: 15px;
         }
-
         .account-input{
             border : 1.5px solid #0D6EFD;
             border-radius: 5px;
@@ -82,16 +80,15 @@
         
         .btn-primary {
             margin: 5px;
-            margin-top: -2px;
+            margin-top: -4px;
             width: 100%;
         }
-
         .btn-secondary {
             margin: 5px;
-            margin-top: -2px;
+            margin-top: -4px;
             width: 100%;
+            margin-bottom:10px;
         }
-
         .already {
             font-size: 11px;
             color: #0D6EFD;
@@ -101,28 +98,29 @@
 <body>
 	<%@ include file="../common/userMenubar.jsp" %>
 	
-		<div style="height : 200px"></div>
+	<div style="height : 200px"></div>
         
-       <section class="vh-100" style="background-color: white;">
+      <section class="vh-100" style="background-color: white;">
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
        
                 <div class="card-body p-5 text-center">
                     <div class="phone-account">
-                        <h4 class="signIn">스페이스핏 회원가입</h4><br>
+                        <h4 class="h4SignIn">스페이스핏 회원가입</h4><br>
                         <div class="agreement">
                     
-                            <label for="agree_all">
+                            <div>
                                 <input type="checkbox" name="agree_all" id="agree_all">
-                                <span>모두 동의합니다</span><br><br>
-                            </label>
+                                <span>모두 동의합니다</span><br><hr>
+                            </div>
                                 
-                            <label for="agree" >
-                                    <input type="checkbox" name="agree" value="1">
-                                    <span>이용약관 동의<strong>(필수)</strong></span>
-                                   
-                                        <div class="agree-box">
+                            <label for="agree">
+                           			<div class="agreeInput">
+                           				 <input type="checkbox" name="agree" value="1">
+                                    	 <span>이용약관 동의<strong>(필수)</strong></span>
+                           			</div>
+                                    <div class="agreeBox">
                                             <h6>제1조(목적) </h6>
                                             <p>이 약관은 (유)내고향시푸드(전자거래 사업자)이 운영하는 홈페이지(이하 "쇼핑몰"이라 한다)에서 제공하는 인터넷 관련 서비스(이하 "서비스"라 한다)를 이용함에 있어 (유)내고향시푸드와 이용자의 권리·의무 및 책임사항을 규정함을 목적으로 합니다. </p>
                                             ※ 「PC통신 등을 이용하는 전자거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다」 
@@ -331,23 +329,25 @@
                                             ① "쇼핑몰"과 이용자간에 발생한 전자거래 분쟁에 관한 소송은 민사소송법상의 관할법원에 제기합니다. 
                                             
                                             ② "쇼핑몰"과 이용자간에 제기된 전자거래 소송에는 한국법을 적용합니다. 
-                        
-                                    </div>
+                                  </div>
                             </label>
-                            
-                            <label for="agree" >
-                                <input type="checkbox" name="agree" value="2">
-                                <span>개인정보 수집, 이용 동의<strong>(필수)</strong></span>
-                            	 <div class="agree-box">
+						                            
+                            <label for="agree">
+                            	<div class="agreeInput">
+	                                <input type="checkbox" name="agree" value="2">
+	                                <span>개인정보 수집, 이용 동의<strong>(필수)</strong></span>
+	                            </div>
+                                <div class="agreeBox">
                                     개인정보보호법에 따라 스페이스핏에 회원가입 신청하시는 분께<br> 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적,<br> 개인정보의 보유 및 이용기간, 동의 거부권 및 동의 거부 시<br> 불이익에 관한 사항을 안내 드리오니<br>자세히 읽은 후 동의하여 주시기 바랍니다.
                                 </div>
                             </label>
                               
-                            <label for="agree" data-bs-toggle="collapse" data-bs-target="#demo3">
-                                <input type="checkbox" name="agree" value="3">
-                                <span>휴대폰 인증 이용약관 동의<strong>(필수)</strong></span>
-                               
-                                    <div class="agree-box">
+                            <label for="agree">
+                            	<div class="agreeInput">
+                            		  <input type="checkbox" name="agree" value="3">
+                                	  <span>휴대폰 인증 이용약관 동의<strong>(필수)</strong></span>
+                            	</div>
+								<div class="agreeBox">
                                         휴대폰본인확인 서비스 이용약관
                                             (주) 드림시큐리티
                                             제 1 조 목적
@@ -389,28 +389,49 @@
                                             리적 조치를 취합니다.
                                             ④ “회사”는 서버 및 통신기기의 정상작동여부 확인을 위하여 정보처리시스템 자원 상태의 감시, 경고 및 제어가 가능한 모니터링 체계를 갖춥니다.
                                     </div>
-                                </div>
                             </label>
                             
-                            <label for="agree" data-bs-toggle="collapse" data-bs-target="#demo4">
-                                <input type="checkbox" name="agree" value="4">
-                                <span>이벤트, 혜택정보 수신동의<strong class="select_disable">(선택)</strong></span>
-                                <div id="demo4" class="collapse">
+                            <label for="agree">
+                            	<div class="agreeInput">
+                            		 <input type="checkbox" name="agree" value="4">
+                                	<span>이벤트, 혜택정보 수신동의<strong class="select_disable">(선택)</strong></span>
+                            	</div>
+                                <div class="agreeBox">
                                     스페이스핏에서 제공하는 이벤트/혜택 등 다양한 정보를<br> 휴대전화(스페이스핏 알림 또는 문자), 이메일로 받아보실 수 있습니다.<br> 일부 서비스(별도 회원 체계로 운영하거나 <br>스페이스핏 가입 이후 추가 가입하여 이용하는 서비스 등)의 경우, <br>개별 서비스에 대해 별도 수신 동의를 받을 수 있으며, <br>이때에도 수신 동의에 대해 별도로 안내하고 동의를 받습니다.
                                 </div>
                             </label>
-
-                        </div>
-                       <script>
-                        const agreeChkAll = document.querySelector('input[name=agree_all]');
-                            agreeChkAll.addEventListener('change', (e) => {
-                            let agreeChk = document.querySelectorAll('input[name=agree]');
-                            for(let i = 0; i < agreeChk.length; i++){
-                            agreeChk[i].checked = e.target.checked;
-                            }
-                        });
-                        </script>
-                        <hr>
+						<script>
+							$(function(){
+					            $(".agreeInput").click(function(){ //==> 아코디언형식
+					                // $(this).next():클릭이벤트가 발생한 div 요소 바로 뒤의 요소
+					                const $aInputEl = $(this).next(); //제이쿼리 방식으로 선택한 요소
+					                if($aInputEl.css("display")=="none") {
+					
+					                    // 일단 모든 p를 닫고
+					                    $(this).siblings(".agreeBox").slideUp();
+					
+					                    // 선택한 p만 보여지게끔
+					                    $aInputEl.slideDown();
+					                } else {
+					                    // 사라지게끔
+					                    $aInputEl.slideUp();
+					                }
+					            })
+					        })
+					        
+					        
+					        $(function(){
+					        	 const agreeChkAll = document.querySelector('input[name=agree_all]');
+		                            agreeChkAll.addEventListener('change', (e) => {
+		                            let agreeChk = document.querySelectorAll('input[name=agree]');
+		                            for(let i = 0; i < agreeChk.length; i++){
+		                            agreeChk[i].checked = e.target.checked;
+		                            }
+		                        });
+					        })
+						</script>
+						<hr>
+                        </div>              
                     </div>
                     <div class="phone">
                         <div class="phone box">
@@ -421,13 +442,12 @@
                             <span class="picon-span">  
                                 휴대전화인증
                             </span>
-                           
                             <br>
                         </div>
                         <div class="phone message">
-                            <input type="text" placeholder="핸드폰번호를 입력해주세요 (-제외)" class="account-input" id="phone"><br>
+                            <input type="text" placeholder="핸드폰번호를 입력해주세요 (-제외)" class="account-input" id="phone">
                             <button type="submit" class="btn btn-secondary">인증번호 받기</button><br>
-                            <input type="text" placeholder="인증번호를 입력해주세요" class="account-input" id="phone-message"><br>
+                            <input type="text" placeholder="인증번호를 입력해주세요" class="account-input" id="phone-message">
                             <button type="submit" class="btn btn-primary">확인</button><br>
                         </div>
                         <hr>

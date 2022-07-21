@@ -11,7 +11,7 @@
 	      }
 	
 	   .card-body {
-	          box-shadow : 0px 0px 12px rgb(13, 109, 253, 0.7);
+	          box-shadow : 0px 0px 12px rgb(13, 109, 253, 0.4);
 	          border-radius: 15px;
 	          width: 90%;
 	      }
@@ -91,8 +91,6 @@
 	<%@ include file="../common/userMenubar.jsp" %>
 	
 	<div style="height : 200px"></div>
-        
-    <div style="height : 200px"></div>
         
        <section class="vh-100" style="background-color: white;">
         <div class="container py-5 h-100">
