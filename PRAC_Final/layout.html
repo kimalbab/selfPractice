@@ -171,13 +171,6 @@
           <div class="menu-inner-shadow"></div>
 
           <ul class="menu-inner py-1">
-            <!-- Dashboard -->
-            <li class="menu-item">
-              <a href="index.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Main</div>
-              </a>
-            </li>
 
             <!-- Layouts -->
 
@@ -185,7 +178,7 @@
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">Fitness Managing System</span>
             </li>
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons bx bxs-edit'></i>
                 <div data-i18n="Account Settings" class="big-menu-label">근태관리</div>
@@ -322,7 +315,7 @@
         <!-- / Menu -->
 
         <!-- Layout container -->
-        <div class="layout-page">
+        <div class="layout-page"  style="margin-top: 20px;">
           <!-- Navbar -->
 
           <nav
@@ -335,7 +328,7 @@
               </a>
             </div>
 
-            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse"> 
               <!-- Search -->
               <div class="navbar-nav align-items-center">
                 <div class="nav-item d-flex align-items-center" id="navbar-profile-btns">
@@ -428,281 +421,120 @@
 
           <!-- / Navbar -->
 
-          <style>
+        
 
-            .outer{
-              width: 87%;
-              align-items: center;
-              transform: translateX(7.5%);
-              height: 100%;
-            }
-            .outer * {
-              margin: auto;
-            }
+    <div class="content-wrapper">
+      <div class="container-xxl flex-grow-1 container-p-y">
+        <div class="row">
 
-            .div1{
-              width: 20%;
-              float: left;
-              margin-left: 26px;
-              margin-top: 20px;
-              background-color: white;
-              height: 100%;
-              border-radius: 10px;
-              box-shadow: 0 0 0.375rem 0.25rem rgb(161 172 184 / 15%);
-              padding: 10px;
-            }
-
-            .div1 *{
-              align-items: center;
-              text-align: center;
-            }
-            
-
-            .div2{
-              width: 74%;
-              float: right;
-              margin-right: 26px;
-              margin-top: 20px;
-              background-color: white;
-              
-              border-radius: 10px;
-              box-shadow: 0 0 0.375rem 0.25rem rgb(161 172 184 / 15%);
-              padding: 10px;
-              height: 100%;
-            }
-
-            .workPic {
-              width: 100px;
-              margin-top: 30px;
-              transform: translateX(50%);
-            }
-    
-            .nameBox {
-              font-size: 12px;
-              align-items: center;
-              text-align: center;
-              margin-top: 15px;
-            }
-            
-            .workTime{
-              padding: 10px;
-              margin-top: 15px;
-            }
-
-            .workTime span {
-              font-size: 12px;
-            }
-            
-            .workTime span:nth-child(1), .workTime span:nth-child(4) { 
-              float:left;
-              text-align: left;
-            }
-
-            .workTime span:nth-child(2) , .workTime span:nth-child(5) { 
-              float:right;
-              text-align: right;
-            }
-
-            .workTime > div {
-              font-size: 56px;
-              color: #696CFF;
-            }
-
-            .workChange * {
-              padding: 10px;
-              margin-top: 30px;
-            }
-
-            .vacation{
-              display: flex;
-            }
-
-            .vacation *{
-              width:48%;
-              height: 120px;
-              background-color:#F5F5F9;
-              font-size: 12px;
-              border-radius: 10px;
-              align-items: center;
-              text-align: center;
-            }
-
-            .yearVac span:nth-child(1), .realVac span:nth-child(1) {
-              font-size: 20px;
-            }
-
-            .yearVac span:nth-child(3), .realVac span:nth-child(3) {
-              font-size: 35px;
-              color: #696CFF;
-            }
-
-
-          </style>
-
-
-
-          <!-- 근태 -->
-          <div class="outer">
-            <div class="div1">
-              <div class="profile row">
-                <div class="col-12">
-                  <img src="sneat-1.0.0/assets/img/avatars/1.png" alt class="w-px-60 h-auto rounded-circle workPic" />
+          <!-- <h5 class="py-3 my-4">근태관리 페이지</h5> -->
+          <div class="col-xl-12">
+            <!-- <h6 class="text-muted">Filled Pills</h6> -->
+            <div class="nav-align-top mb-4">
+              <ul class="nav nav-pills mb-3 nav-fill" role="tablist">
+                <li class="nav-item">
+                  <button
+                    type="button"
+                    class="nav-link active"
+                    role="tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#navs-pills-justified-home"
+                    aria-controls="navs-pills-justified-home"
+                    aria-selected="true"
+                  >
+                    <i class="tf-icons bx bx-home"></i> Home
+                    <span class="badge rounded-pill badge-center h-px-20 w-px-20 bg-danger">3</span>
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button
+                    type="button"
+                    class="nav-link"
+                    role="tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#navs-pills-justified-profile"
+                    aria-controls="navs-pills-justified-profile"
+                    aria-selected="false"
+                  >
+                    <i class="tf-icons bx bx-user"></i> Profile
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button
+                    type="button"
+                    class="nav-link"
+                    role="tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#navs-pills-justified-messages"
+                    aria-controls="navs-pills-justified-messages"
+                    aria-selected="false"
+                  >
+                    <i class="tf-icons bx bx-message-square"></i> Messages
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" style="height: 700px;">
+                <div class="tab-pane fade show active" id="navs-pills-justified-home" role="tabpanel">
+                  <p>
+                    Icing pastry pudding oat cake. Lemon drops cotton candy caramels cake caramels sesame snaps
+                    powder. Bear claw candy topping.
+                  </p>
+                  <p class="mb-0">
+                    Tootsie roll fruitcake cookie. Dessert topping pie. Jujubes wafer carrot cake jelly. Bonbon
+                    jelly-o jelly-o ice cream jelly beans candy canes cake bonbon. Cookie jelly beans marshmallow
+                    jujubes sweet.
+                  </p>
                 </div>
-                <div class="col-12 nameBox">
-                  <span><b>홍길동</b> 트레이너</span>
+                <div class="tab-pane fade" id="navs-pills-justified-profile" role="tabpanel">
+                  <p>
+                    Donut dragée jelly pie halvah. Danish gingerbread bonbon cookie wafer candy oat cake ice
+                    cream. Gummies halvah tootsie roll muffin biscuit icing dessert gingerbread. Pastry ice cream
+                    cheesecake fruitcake.
+                  </p>
+                  <p class="mb-0">
+                    Jelly-o jelly beans icing pastry cake cake lemon drops. Muffin muffin pie tiramisu halvah
+                    cotton candy liquorice caramels.
+                  </p>
                 </div>
-              </div>
-              <div class="workTime">
-                <span>2022/08/20</span>
-                <span>금일 누적근무</span>
-                <div>06:30:58</div>
-                <span>출근<br>퇴근</span>
-                <span>08:45:21<br>근무중</span>
-              </div>
-              <div style="height:30px"></div>
-              <form class="workChange" action="" method="post">
-                <select class="form-select placement-dropdown" id="selectPlacement">
-                  <option>근무중</option>
-                  <option>수업중</option>
-                  <option>대기중</option>
-                  <option>휴식중</option>
-                </select>
-                <button class="btn btn-primary">근태수정요청</button>
-                <button class="btn btn-secondary">엑셀다운로드</button>
-              </form>
-              <div class="vacation">
-                <div class="yearVac">
-                  <span>🎁<br></span>
-                  <span>올해의 연차<br></span>
-                  <span>11<br></span>
-                  <span>일 남았어요!<br></span>
-                </div>
-                <div class="realVac">
-                  <span>🎉<br></span>
-                  <span>올해의 휴가<br></span>
-                  <span>3<br></span>
-                  <span>일 남았어요!<br></span>
+                <div class="tab-pane fade" id="navs-pills-justified-messages" role="tabpanel">
+                  <p>
+                    Oat cake chupa chups dragée donut toffee. Sweet cotton candy jelly beans macaroon gummies
+                    cupcake gummi bears cake chocolate.
+                  </p>
+                  <p class="mb-0">
+                    Cake chocolate bar cotton candy apple pie tootsie roll ice cream apple pie brownie cake. Sweet
+                    roll icing sesame snaps caramels danish toffee. Brownie biscuit dessert dessert. Pudding jelly
+                    jelly-o tart brownie jelly.
+                  </p>
                 </div>
               </div>
             </div>
-           
-            <div class="div2">
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-              한칸 내가 다쓸거임<br>
-
-            </div>
-
           </div>
+        </div>
+       </div>
 
-          <div style="height: 100px;"></div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           
           
         </div>
-
-
-        
         <!-- / Layout page -->
       </div>
 
