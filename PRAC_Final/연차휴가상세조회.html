@@ -93,6 +93,53 @@
         .small-menu-label{
             font-size: 12px;
         }
+
+       
+
+        /*여기서부터 개별 스타일*/
+
+        
+        .vacDetailDiv{
+          height: 759px;
+        }
+
+        .card-header{
+          color: #696CFF;
+        }
+
+        .vacSimple{
+            display: flex;
+            background-color: #f9f9f9;
+            height: 150px;
+            border-radius: 20px;
+            width: 95%;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 0px;
+        }
+        
+        .vacSimple *{
+          align-items: center;
+          margin: auto;
+          text-align: center;
+        }
+
+        .vacSm {
+          font-size: 12px;
+        }
+
+        .vacLg{
+          color: #696CFF;
+          font-size: 40px;
+        }
+        .table{
+            font-size: 14px;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+        
+        
     </style>
   </head>
 
@@ -171,13 +218,6 @@
           <div class="menu-inner-shadow"></div>
 
           <ul class="menu-inner py-1">
-            <!-- Dashboard -->
-            <li class="menu-item active">
-              <a href="index.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Main</div>
-              </a>
-            </li>
 
             <!-- Layouts -->
 
@@ -197,7 +237,7 @@
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="전직원근태관리.html" class="menu-link">
+                  <a href="managerManagement.html" class="menu-link">
                     <div data-i18n="Notifications" class="small-menu-label">센터 근태관리</div>
                   </a>
                 </li>
@@ -322,7 +362,7 @@
         <!-- / Menu -->
 
         <!-- Layout container -->
-        <div class="layout-page">
+        <div class="layout-page"  style="margin-top: 20px;">
           <!-- Navbar -->
 
           <nav
@@ -335,7 +375,7 @@
               </a>
             </div>
 
-            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse"> 
               <!-- Search -->
               <div class="navbar-nav align-items-center">
                 <div class="nav-item d-flex align-items-center" id="navbar-profile-btns">
@@ -429,12 +469,112 @@
           <!-- / Navbar -->
 
         
-          
-          
-        </div>
-        <!-- / Layout page -->
-      </div>
 
+    <div class="content-wrapper">
+      <div class="container-xxl flex-grow-1 container-p-y">
+        <div class="row">
+            <!-- 연월차관리 -->
+            <div class="col-lg ">
+              <div class="card mb-4 vacDetailDiv">
+                <h5 class="card-header"><b>🏋️‍♂️ 정저탄</b> 트레이너 　　　　　　　　　　　　　　　　　　　<b style="color:#8592a3">🎁 연월차관리</b></h5>
+                <div class="card-body row">
+                    <div class="vacSimple">
+                      <div class="col-4 vacDiv">
+                          <div class="vacSm">발생연월차</div>
+                          <div class="vacLg">15</div>
+                      </div>
+                      <div class="col-4 vacDiv">
+                          <div class="vacSm">소진연월차</div>
+                          <div class="vacLg">3</div>
+                      </div>
+                      <div class="col-4 vacDiv">
+                          <div class="vacSm">잔여연월차</div>
+                          <div class="vacLg">12</div>
+                      </div>
+                    </div>
+                </div>
+                <h5 class="card-header"><b>📜 연차사용내역</b><br>
+                <div class="card-body">
+                  <table class="table">
+                    <thead>
+                        <tr>
+                            <td><b>연월차사용일</b></td>
+                            <td><b>사유</b></td>
+                            <td><b>차감연차</b></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2022/08/05</td>
+                            <td>개인사유</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2022/08/05</td>
+                            <td>개인사유</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2022/08/05</td>
+                            <td>개인사유</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2022/08/05</td>
+                            <td>개인사유</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          
+            <!-- 휴가관리 -->
+            <div class="col-lg ">
+              <div class="card mb-4 vacDetailDiv">
+                <h5 class="card-header"> 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<b style="color:#8592a3">🎉 휴가 관리</b></h5>
+                <div class="card-body row">
+                    <div class="vacSimple">
+                      <div class="col-4 vacDiv">
+                          <div class="vacSm">발생휴가</div>
+                          <div class="vacLg">3</div>
+                      </div>
+                      <div class="col-4 vacDiv">
+                          <div class="vacSm">소진휴가</div>
+                          <div class="vacLg">1</div>
+                      </div>
+                      <div class="col-4 vacDiv">
+                          <div class="vacSm">잔여휴가</div>
+                          <div class="vacLg">2</div>
+                      </div>
+                    </div>
+                </div>
+                <h5 class="card-header"><b>📜 휴가사용내역</b><br>
+                <div class="card-body">
+                  <table class="table">
+                    <thead>
+                        <tr>
+                            <td><b>휴가사용일</b></td>
+                            <td><b>사유</b></td>
+                            <td><b>차감휴가</b></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2022/08/05</td>
+                            <td>정기휴가</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+      </div>
       <!-- Overlay -->
       <div class="layout-overlay layout-menu-toggle"></div>
     </div>

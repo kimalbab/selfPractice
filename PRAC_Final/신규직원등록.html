@@ -93,6 +93,32 @@
         .small-menu-label{
             font-size: 12px;
         }
+
+       
+
+        /*여기서부터 개별 스타일*/
+
+        .mb-3 label, .card-header{
+          color: #696CFF;
+          font-weight: 600;
+        }
+
+        .btnDiv{
+          display: flex;
+        }
+
+        .btnDiv {
+          align-items: center;
+          margin: auto;
+          justify-content: center;
+        }
+
+        .profileDiv{
+          height: 759px;
+        }
+
+        
+        
     </style>
   </head>
 
@@ -171,13 +197,6 @@
           <div class="menu-inner-shadow"></div>
 
           <ul class="menu-inner py-1">
-            <!-- Dashboard -->
-            <li class="menu-item active">
-              <a href="index.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Main</div>
-              </a>
-            </li>
 
             <!-- Layouts -->
 
@@ -197,7 +216,7 @@
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="전직원근태관리.html" class="menu-link">
+                  <a href="managerManagement.html" class="menu-link">
                     <div data-i18n="Notifications" class="small-menu-label">센터 근태관리</div>
                   </a>
                 </li>
@@ -322,7 +341,7 @@
         <!-- / Menu -->
 
         <!-- Layout container -->
-        <div class="layout-page">
+        <div class="layout-page"  style="margin-top: 20px;">
           <!-- Navbar -->
 
           <nav
@@ -335,7 +354,7 @@
               </a>
             </div>
 
-            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse"> 
               <!-- Search -->
               <div class="navbar-nav align-items-center">
                 <div class="nav-item d-flex align-items-center" id="navbar-profile-btns">
@@ -429,12 +448,79 @@
           <!-- / Navbar -->
 
         
-          
-          
-        </div>
-        <!-- / Layout page -->
-      </div>
 
+    <div class="content-wrapper">
+      <div class="container-xxl flex-grow-1 container-p-y">
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="card mb-4 profileDiv">
+              <h5 class="card-header">🏋️‍♂️ 프로필 사진 등록</h5>
+              <!-- Account -->
+              <div class="card-body">
+                <div class="d-flex align-items-start align-items-sm-center gap-4">
+                  <img src="sneat-1.0.0/assets/img/avatars/1.png" alt="user-avatar" class="d-block rounded" height="70" width="70" id="uploadedAvatar" />
+                  <div class="button-wrapper">
+                      <button type="button" class="btn btn-outline-primary">프로필사진 등록</button>
+                      <input type="file" id="upload" class="account-file-input" hidden accept="image/png, image/jpeg" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <hr class="my-0">
+              <!-- Account -->
+              <div class="card-body">
+                <form id="formAccountSettings" method="POST" onsubmit="return false">
+                  <div style="height : 50px"></div>
+                  <h5 class="card-header" style="padding:0">🏋️‍♂️ 신규직원 인적정보 작성</h5><div style="height : 30px"></div>
+                  <div class="row">
+                    <div class="mb-3 col-md-6">
+                      <label for="firstName" class="form-label">이름</label>
+                      <input class="form-control" type="text" id="firstName" name="firstName" value="신규 직원 이름 작성" autofocus required/>
+                    </div>
+                    <div class="mb-3 col-md-3">
+                      <label for="organization" class="form-label">직급</label>
+                      <div style="height : 10px"></div>
+                      <input type="radio" name="trainer" value="trainer">트레이너&nbsp&nbsp&nbsp&nbsp&nbsp
+                      <input type="radio" name="admin" value="admin">관리자
+                    </div>
+                    <div class="mb-3 col-md-3">
+                      <label for="organization" class="form-label">성별</label>
+                      <div style="height : 10px"></div>
+                      <input type="radio" name="gender" value="M">남자&nbsp&nbsp&nbsp&nbsp&nbsp
+                      <input type="radio" name="gender" value="F">여자
+                    </div>
+                    <div class="mb-3 col-md-6">
+                      <label for="lastName" class="form-label">사번</label>
+                      <input class="form-control" type="text" name="lastName" id="lastName" value="이미입력된사번" readonly/>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                      <label for="email" class="form-label">이메일</label>
+                      <input class="form-control" type="text" id="email" name="email" value="이미입력된이메일@example.com" placeholder="john.doe@example.com" readonly/>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                      <label class="form-label" for="phoneNumber">전화번호</label>
+                      <div class="input-group input-group-merge">
+                        <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="전화번호를 입력해주세요" />
+                      </div>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                      <label for="address" class="form-label">계좌번호</label>
+                      <input type="text" class="form-control" id="address" name="address" placeholder="Address" />
+                    </div>
+                  </div>
+                  <div style="height : 40px"></div>
+                  <div class="mt-2 btnDiv">
+                    <button type="submit" class="btn btn-primary me-2">직원등록</button>
+                    <button type="button" class="btn btn-secondary me-2">목록으로</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- /Account -->
+          </div>
+        </div>
+      </div>
       <!-- Overlay -->
       <div class="layout-overlay layout-menu-toggle"></div>
     </div>
