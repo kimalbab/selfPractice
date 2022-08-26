@@ -3,12 +3,10 @@
 <!-- =========================================================
 * Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
 ==============================================================
-
 * Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
 * Created by: ThemeSelection
 * License: You must have a valid license purchased in order to legally use the theme for your project.
 * Copyright ThemeSelection (https://themeselection.com)
-
 =========================================================
  -->
 <!-- beautify ignore:start -->
@@ -112,6 +110,11 @@
 
         .pagination{
           justify-content: center;
+        }
+
+        #dataTable th{
+          padding:1px;
+          width : 18px;
         }
 
         #late{ background-color: #fcffe1;}
@@ -535,113 +538,37 @@
                           <thead>
                             <tr>
                               <th><input type="checkbox" name="choiceAll" id="choiceAll" onclick="checkAll();"></th>
-                              <th>일</th>
-                              <th>김사장</th>
-                              <th>최부사</th>
-                              <th>정헬트</th>
-                              <th>윤헬트</th>
-                              <th>김헬트</th>
-                              <th>박헬트</th>
-                              <th>최헬트</th>
-                              <th>변헬트</th>
-                              <th>이헬트</th>
-                              <th>김헬트</th>
-                            </tr>
-                          </thead>
-                          <tfoot>
-                            <tr>
-                              <th><input type="checkbox" name="choiceAll" id="choiceAll" onclick="checkAll();"></th>
-                              <th>일</th>
-                              <th>김사장</th>
-                              <th>최부사</th>
-                              <th>정헬트</th>
-                              <th>윤헬트</th>
-                              <th>김헬트</th>
-                              <th>박헬트</th>
-                              <th>최헬트</th>
-                              <th>변헬트</th>
-                              <th>이헬트</th>
-                              <th>김헬트</th>
-                            </tr>
-                          </tfoot>
-                          
-                          <tbody id="memListTBody">
-                            <tr>
-                              <th><input type="checkbox" name="choiceAll" id="choiceAll" onclick="checkAll();"></th>
                               <th>01</th>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                            </tr>
-                            <tr>
-                              <th><input type="checkbox" name="choiceAll" id="choiceAll" onclick="checkAll();"></th>
-                              <th>01</th>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                            </tr>
-                            <tr>
-                              <th><input type="checkbox" name="choiceAll" id="choiceAll" onclick="checkAll();"></th>
-                              <th>01</th>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                            </tr>
-                            <tr>
-                              <th><input type="checkbox" name="choiceAll" id="choiceAll" onclick="checkAll();"></th>
-                              <th>01</th>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                            </tr>
-                            <tr>
-                              <th><input type="checkbox" name="choiceAll" id="choiceAll" onclick="checkAll();"></th>
-                              <th>01</th>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                              <td>원</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <table class="table table-bordered memberListTable" id="dataTable" width="100%" cellspacing="0">
-                          <thead>
-                            <tr>
-                              <th><input type="checkbox" name="choiceAll" id="choiceAll" onclick="checkAll();"></th>
+                              <th>02</th>
+                              <th>03</th>
+                              <th>04</th>
+                              <th>05</th>
+                              <th>06</th>
+                              <th>07</th>
+                              <th>08</th>
+                              <th>09</th>
+                              <th>10</th>
+                              <th>11</th>
+                              <th>12</th>
+                              <th>13</th>
+                              <th>14</th>
+                              <th>15</th>
+                              <th>16</th>
+                              <th>17</th>
+                              <th>18</th>
+                              <th>19</th>
+                              <th>20</th>
+                              <th>21</th>
+                              <th>22</th>
+                              <th>23</th>
+                              <th>24</th>
+                              <th>25</th>
+                              <th>26</th>
+                              <th>27</th>
+                              <th>28</th>
+                              <th>29</th>
+                              <th>30</th>
+                              <th>31</th>
                               <th id="late">지각</th>
                               <th id="illegal">무단</th>
                               <th id="approve">승인</th>
@@ -653,6 +580,37 @@
                           <tfoot>
                             <tr>
                               <th><input type="checkbox" name="choiceAll" id="choiceAll" onclick="checkAll();"></th>
+                              <th>01</th>
+                              <th>02</th>
+                              <th>03</th>
+                              <th>04</th>
+                              <th>05</th>
+                              <th>06</th>
+                              <th>07</th>
+                              <th>08</th>
+                              <th>09</th>
+                              <th>10</th>
+                              <th>11</th>
+                              <th>12</th>
+                              <th>13</th>
+                              <th>14</th>
+                              <th>15</th>
+                              <th>16</th>
+                              <th>17</th>
+                              <th>18</th>
+                              <th>19</th>
+                              <th>20</th>
+                              <th>21</th>
+                              <th>22</th>
+                              <th>23</th>
+                              <th>24</th>
+                              <th>25</th>
+                              <th>26</th>
+                              <th>27</th>
+                              <th>28</th>
+                              <th>29</th>
+                              <th>30</th>
+                              <th>31</th>
                               <th id="late">지각</th>
                               <th id="illegal">무단</th>
                               <th id="approve">승인</th>
