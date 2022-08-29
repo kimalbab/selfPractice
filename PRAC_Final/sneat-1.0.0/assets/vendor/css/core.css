@@ -1140,9 +1140,14 @@ progress {
     width: 8.33333333%;
   }
 
-  .col-md-2 {
+  /* .col-md-2 {
     flex: 0 0 auto;
     width: 16.66666667%;
+  } */
+ /*수정버전*/
+    .col-md-2 {
+    flex: 0 0 auto;
+    width: 20%;
   }
 
   .col-md-3 {
@@ -1180,9 +1185,15 @@ progress {
     width: 75%;
   }
 
-  .col-md-10 {
+  /* .col-md-10 {
     flex: 0 0 auto;
     width: 83.33333333%;
+  } */
+
+  /* 수정버전 */
+  .col-md-10 {
+    flex: 0 0 auto;
+    width: 80%;
   }
 
   .col-md-11 {
