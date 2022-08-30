@@ -99,9 +99,12 @@
 
         /*여기서부터 개별 스타일*/
         
-        table{
+        table *{
           text-align: center;
         }
+
+
+
 
         table thead, table tfoot{
           background-color: #f8f4fc;
@@ -112,16 +115,23 @@
           justify-content: center;
         }
 
-        #dataTable th{
-          padding:1px;
-          width : 18px;
+        #dataTable td, #dataTable th{
+          padding:0px;
+          font-size: 4px;
+          height: 23px;
+        }
+
+        #workTable td, #workTable th{
+          padding:0px;
+          font-size: 4px;
+          height: 23px;
         }
 
         #late{ background-color: #fcffe1;}
         #illegal{ background-color: #ffebeb;}
         #approve{ background-color: #e1ffdd;}
-        #yearVac{ background-color: #e7fdf9;}
-        #realVac{ background-color: #e7fdf9;}
+        /* #yearVac{ background-color: #e7fdf9;} */
+        #vacation{ background-color: #f2f2f2;}
         #plus{ background-color: #c8c9ff;}
 
 
@@ -534,91 +544,126 @@
                 <div style="height : 5px"></div>
                     <div class="card-body">
                       <div class="table-responsive">
-                        <table class="table table-bordered memberListTable" id="dataTable" width="100%" cellspacing="0">
-                          <thead>
-                            <tr>
-                              <th><input type="checkbox" name="choiceAll" id="choiceAll" onclick="checkAll();"></th>
-                              <th>이름</th>
-                              <th>01</th>
-                              <th>02</th>
-                              <th>03</th>
-                              <th>04</th>
-                              <th>05</th>
-                              <th>06</th>
-                              <th>07</th>
-                              <th>08</th>
-                              <th>09</th>
-                              <th>10</th>
-                              <th>11</th>
-                              <th>12</th>
-                              <th>13</th>
-                              <th>14</th>
-                              <th>15</th>
-                              <th>16</th>
-                              <th>17</th>
-                              <th>18</th>
-                              <th>19</th>
-                              <th>20</th>
-                              <th>21</th>
-                              <th>22</th>
-                              <th>23</th>
-                              <th>24</th>
-                              <th>25</th>
-                              <th>26</th>
-                              <th>27</th>
-                              <th>28</th>
-                              <th>29</th>
-                              <th>30</th>
-                              <th>31</th>
-                            </tr>
-                          </thead>
-                          <tfoot>
-                            <tr>
-                              <th><input type="checkbox" name="choiceAll" id="choiceAll" onclick="checkAll();"></th>
-                              <th>이름</th>
-                              <th>01</th>
-                              <th>02</th>
-                              <th>03</th>
-                              <th>04</th>
-                              <th>05</th>
-                              <th>06</th>
-                              <th>07</th>
-                              <th>08</th>
-                              <th>09</th>
-                              <th>10</th>
-                              <th>11</th>
-                              <th>12</th>
-                              <th>13</th>
-                              <th>14</th>
-                              <th>15</th>
-                              <th>16</th>
-                              <th>17</th>
-                              <th>18</th>
-                              <th>19</th>
-                              <th>20</th>
-                              <th>21</th>
-                              <th>22</th>
-                              <th>23</th>
-                              <th>24</th>
-                              <th>25</th>
-                              <th>26</th>
-                              <th>27</th>
-                              <th>28</th>
-                              <th>29</th>
-                              <th>30</th>
-                              <th>31</th>
-                            </tr>
-                          </tfoot>
-                          
-                          <tbody id="memListTBody">
-                            <tr>
-                              <th><input type="checkbox" name="choiceAll" id="choiceAll" onclick="checkAll();"></th>
-                              <th>이소희</th>
-                            </tr>
-                          </tbody>
-                        </table>
+                        <div style="width:83%; float:left;">
+                          <table class="table table-bordered memberListTable" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                              <tr>
+                                <th><input type="checkbox" name="choiceAll" id="choiceAll" onclick="checkAll();"></th>
+                                <th>이&nbsp&nbsp름</th>
+                                <th>01</th>
+                                <th>02</th>
+                                <th>03</th>
+                                <th>04</th>
+                                <th>05</th>
+                                <th>06</th>
+                                <th>07</th>
+                                <th>08</th>
+                                <th>09</th>
+                                <th>10</th>
+                                <th>11</th>
+                                <th>12</th>
+                                <th>13</th>
+                                <th>14</th>
+                                <th>15</th>
+                                <th>16</th>
+                                <th>17</th>
+                                <th>18</th>
+                                <th>19</th>
+                                <th>20</th>
+                                <th>21</th>
+                                <th>22</th>
+                                <th>23</th>
+                                <th>24</th>
+                                <th>25</th>
+                                <th>26</th>
+                                <th>27</th>
+                                <th>28</th>
+                                <th>29</th>
+                                <th>30</th>
+                                <th>31</th>
+                              </tr>
+                            </thead>
+                            <tfoot>
+                              <tr>
+                                <th><input type="checkbox" name="choiceAll" id="choiceAll" onclick="checkAll();"></th>
+                                <th>이&nbsp&nbsp름</th>
+                                <th>01</th>
+                                <th>02</th>
+                                <th>03</th>
+                                <th>04</th>
+                                <th>05</th>
+                                <th>06</th>
+                                <th>07</th>
+                                <th>08</th>
+                                <th>09</th>
+                                <th>10</th>
+                                <th>11</th>
+                                <th>12</th>
+                                <th>13</th>
+                                <th>14</th>
+                                <th>15</th>
+                                <th>16</th>
+                                <th>17</th>
+                                <th>18</th>
+                                <th>19</th>
+                                <th>20</th>
+                                <th>21</th>
+                                <th>22</th>
+                                <th>23</th>
+                                <th>24</th>
+                                <th>25</th>
+                                <th>26</th>
+                                <th>27</th>
+                                <th>28</th>
+                                <th>29</th>
+                                <th>30</th>
+                                <th>31</th>
+                              </tr>
+                            </tfoot>
+                            
+                            <tbody id="memListTBody">
+                              <tr>
+                                <th><input type="checkbox" name="choiceAll" id="choiceAll" onclick="checkAll();"></th>
+                                <th>이소희</th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div style="width:16%; float:right;">
+                          <table class="table table-bordered memberListTable" id="workTable" width="100%" cellspacing="0">
+                            <thead>
+                              <tr>
+                                <th id="illegal">결근</th>
+                                <th id="late">지각</th>
+                                <th id="approve">승인</th>
+                                <th id="vacation">휴가</th>
+                                <th id="plus">연장</th>
+                              </tr>
+                            </thead>
+                            <tfoot>
+                              <tr>
+                                <th id="illegal">결근</th>
+                                <th id="late">지각</th>
+                                <th id="approve">승인</th>
+                                <th id="vacation">휴가</th>
+                                <th id="plus">연장</th>
+                              </tr>
+                            </tfoot>
+                            
+                            <tbody id="memListTBody">
+                              <tr>
+                                <td class="tds">2</td>
+                                <td class="tds">0</td>
+                                <td class="tds">1</td>
+                                <td class="tds">2</td>
+                                <td class="tds">3</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
                         <div style="height : 20px"></div>
-                        <!-- Basic Pagination -->
+                      </div>
+                      <!-- Basic Pagination -->
                         <nav aria-label="Page navigation pageNav">
                           <ul class="pagination">
                             <li class="page-item first">
@@ -650,8 +695,7 @@
                             </li>
                           </ul>
                         </nav>
-                        <!--/ Basic Pagination -->
-                      </div>
+                      <!--/ Basic Pagination -->
                     </div>
                   </div>
                 </div>
