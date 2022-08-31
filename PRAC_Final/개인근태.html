@@ -97,6 +97,9 @@
        
 
         /*여기서부터 개별 스타일*/
+        .card-body{
+          padding-bottom: 10px;
+        }
 
         .vacDetailDiv{
           height: 759px;
@@ -113,8 +116,13 @@
         
 
         #todayWork{
+          width: 90%;
           margin-top: 20px;
           font-size: 12px;
+          text-align: center;
+          justify-content: center;
+          margin: auto;
+          align-items: center;
         }
 
 
@@ -152,6 +160,9 @@
           color: #696CFF;
         }
 
+        #todayWork th{
+          text-align: left;
+        }
         
         #todayWork td{
           text-align: right;
@@ -161,11 +172,31 @@
           margin-top: 30px;
           width: 100%;
           margin-bottom: 10px;
+          text-align: center;
+          justify-content: center;
+          margin: auto;
+          align-items: center;
         }
 
         .modifyBtn, .exelDownBtn{
-          width: 100%;
-          margin-bottom: 10px;
+          width: 90%;
+          margin: auto;
+          justify-content: center;
+        }
+
+        .vacation{
+          display: flex;
+          margin-top:20px;
+        }
+
+        .vacation *{
+          width:48%;
+          height: 140px;
+          background-color:#F5F5F9;
+          font-size: 12px;
+          border-radius: 10px;
+          align-items: center;
+          text-align: center;
         }
         
     </style>
@@ -504,8 +535,8 @@
                   <!-- 연월차관리 -->
                   <div class="col-md-2 ">
                     <div class="card mb-4 vacDetailDiv">
-                        <h5 class="card-header"><b>⏱ 수정요청 타임라인</b></h5>
-                        <div class="card-body">
+                        <h5 class="card-header"><b>📑 오늘의 근태확인</b></h5>
+                        <div class="card-body row">
                           <div class="vacSimple">
                             <div>
                               <i class='bx bxs-user-circle'></i><br>
@@ -542,6 +573,23 @@
                       
                           <button class="btn btn-primary modifyBtn">근태수정요청</button>
                           <button class="btn btn-secondary exelDownBtn">엑셀다운로드</button>
+
+                          <div class="vacation">
+                            <div class="yearVac">
+                              <span>🎁<br></span>
+                              <span>올해의 연차<br></span>
+                              <span>11<br></span>
+                              <span>일 남았어요!<br></span>
+                            </div>
+                            <div class="emptyVac" style="width:12px; background-color: white;">
+                            </div>
+                            <div class="realVac">
+                              <span>🎉<br></span>
+                              <span>올해의 휴가<br></span>
+                              <span>3<br></span>
+                              <span>일 남았어요!<br></span>
+                            </div>
+                          </div>
                         </div>
                     </div>
                   </div>
@@ -549,46 +597,67 @@
                   <!-- 휴가관리 -->
                   <div class="col-md-10 ">
                     <div class="card mb-4 vacDetailDiv">
-                      <h5 class="card-header"> 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<b style="color:#8592a3">🎉 휴가 관리</b></h5>
-                      <div class="card-body row">
+                        <h5 class="card-header"><b>⏱ 오늘의 근태확인</b></h5>
+                        <div class="card-body row">
                           <div class="vacSimple">
-                            <div class="col-4 vacDiv">
-                                <div class="vacSm">발생휴가</div>
-                                <div class="vacLg">3</div>
-                            </div>
-                            <div class="col-4 vacDiv">
-                                <div class="vacSm">소진휴가</div>
-                                <div class="vacLg">1</div>
-                            </div>
-                            <div class="col-4 vacDiv">
-                                <div class="vacSm">잔여휴가</div>
-                                <div class="vacLg">2</div>
+                            <div>
+                              <i class='bx bxs-user-circle'></i><br>
+                              <span class="profileName"><b>홍길동</b><br></span>
+                              <span class="profileName">트레이너</span>
+                              <div style="height: 5px;"></div>
                             </div>
                           </div>
-                      </div>
-                      <h5 class="card-header"><b>📜 휴가사용내역</b><br>
-                      <div class="card-body">
-                        <table class="table">
-                          <thead>
-                              <tr>
-                                  <td><b>휴가사용일</b></td>
-                                  <td><b>사유</b></td>
-                                  <td><b>차감휴가</b></td>
-                              </tr>
-                          </thead>
-                          <tbody>
-                              <tr>
-                                  <td>2022/08/05</td>
-                                  <td>정기휴가</td>
-                                  <td>1</td>
-                              </tr>
-                          </tbody>
-                        </table>
-                      </div>
+                          <table id="todayWork">
+                            <tr>
+                                <th>2022/08/05</th>
+                                <td>금일 누적 근무</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" id="workTime">06:30:58</td>
+                            </tr>
+                            <tr>
+                                <th>출근</th>
+                                <td>08 : 45 : 21</td>
+                            </tr>
+                            <tr>
+                                <th>퇴근</th>
+                                <td>근무중</td>
+                          </table>
+
+                          <form class="workChange" action="" method="post">
+                            <select class="form-select placement-dropdown" id="selectPlacement">
+                              <option>근무중</option>
+                              <option>수업중</option>
+                              <option>대기중</option>
+                              <option>휴식중</option>
+                            </select>
+                          </form>
+                      
+                          <button class="btn btn-primary modifyBtn">근태수정요청</button>
+                          <button class="btn btn-secondary exelDownBtn">엑셀다운로드</button>
+
+                          <div class="vacation">
+                            <div class="yearVac">
+                              <span>🎁<br></span>
+                              <span>올해의 연차<br></span>
+                              <span>11<br></span>
+                              <span>일 남았어요!<br></span>
+                            </div>
+                            <div class="emptyVac" style="width:12px; background-color: white;">
+                            </div>
+                            <div class="realVac">
+                              <span>🎉<br></span>
+                              <span>올해의 휴가<br></span>
+                              <span>3<br></span>
+                              <span>일 남았어요!<br></span>
+                            </div>
+                          </div>
+                        </div>
                     </div>
                   </div>
-
-
+                </div>
+              </div>
+            </div>    
           </div>
       </div>
       <!-- Overlay -->
