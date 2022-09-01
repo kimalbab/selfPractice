@@ -3,12 +3,10 @@
 <!-- =========================================================
 * Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
 ==============================================================
-
 * Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
 * Created by: ThemeSelection
 * License: You must have a valid license purchased in order to legally use the theme for your project.
 * Copyright ThemeSelection (https://themeselection.com)
-
 =========================================================
  -->
 <!-- beautify ignore:start -->
@@ -94,7 +92,8 @@
             font-size: 12px;
         }
 
-       
+      
+
 
         /*여기서부터 개별 스타일*/
         .card-body{
@@ -105,7 +104,7 @@
         }
 
         .vacDetailDiv{
-          height: 759px;
+          height: 709px;
         }
 
         .card-header{
@@ -202,26 +201,46 @@
          margin-bottom: 35px;
         }
 
-        textarea{
-          resize: none;
-          width: 100%;
-          height: 400px;
-          border: 0.5px solid #696CFF;
-          border-radius: 7px;
-        }
 
         .btnDiv {
           align-items: center;
           margin: auto;
-          margin-top:40px;
+          margin-top:50px;
           justify-content: center;
         }
 
         .btnDiv{
           display: flex;
         }
-
         
+        .detailForm thead{
+          color: #696CFF;
+          font-weight: 600;
+        }
+
+        .profileTd *{
+          font-size: 16px;
+          text-align: center;
+        }
+
+        .reason{
+          margin-top: 20px;
+          margin-bottom: 10px;
+          background-color: #f8f4fc;
+          height: 360px;
+          border-radius: 10px;
+        }
+        
+        textarea{
+          resize: none;
+          margin-top: -20px;
+          width: 80%;
+          height: 100px;
+          border: 0.5px solid #696CFF;
+          border-radius: 7px;
+          margin: auto;
+        }
+
         
     </style>
   </head>
@@ -553,13 +572,59 @@
 
         
 
-          <div class="content-wrapper">
-            <div class="container-xxl flex-grow-1 container-p-y">
-              <div class="row">
+    <div class="content-wrapper">
+      <div class="container-xxl flex-grow-1 container-p-y">
+        <div class="row">
+
+          <div class="col-xl-12">
+            <div class="nav-align-top mb-4">
+              <ul class="nav nav-pills mb-3 nav-fill" role="tablist">
+                <li class="nav-item">
+                  <button
+                    type="button"
+                    class="nav-link"
+                    role="tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#navs-pills-justified-messages"
+                    aria-controls="navs-pills-justified-messages"
+                    aria-selected="false"
+                  >
+                    📅 전직원 근태확인
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button
+                    type="button"
+                    class="nav-link"
+                    role="tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#navs-pills-justified-messages"
+                    aria-controls="navs-pills-justified-messages"
+                    aria-selected="false"
+                  >
+                    🎁 연차 관리 &nbsp&&nbsp 🎉 휴가 관리
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button
+                    type="button"
+                    class="nav-link active"
+                    role="tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#navs-pills-justified-home"
+                    aria-controls="navs-pills-justified-home"
+                    aria-selected="true"
+                  >
+                    📝 근태 수정
+                  </button>
+                </li>
+              </ul>
+              
+                <div class="row">
                   <!-- 수정요청관리 -->
                   <div class="col-md-2 ">
                     <div class="card mb-4 vacDetailDiv">
-                        <h5 class="card-header"><b>📜 내 수정요청</b></h5>
+                        <h5 class="card-header"><b>⏰ 수정요청 타임라인</b></h5>
                         <div class="card-body">
                           <button class="simple">
                             <div class="profileDiv">
@@ -578,7 +643,7 @@
                                   <td>출근수정</td>
                                 </tr>
                                 <tr>
-                                  <td colspan="2" style="text-align:center"><button class="btn btn-sm btn-secondary">대기중</button></td>
+                                  <td colspan="2" style="text-align:center"><button class="btn btn-sm btn-primary">처리하기</button></td>
                                 </tr>
                               </table>
                             </div>
@@ -600,14 +665,14 @@
                                   <td>출근수정</td>
                                 </tr>
                                 <tr>
-                                  <td colspan="2" style="text-align:center"><button class="btn btn-sm btn-primary">승인됨</button></td>
+                                  <td colspan="2" style="text-align:center"><button class="btn btn-sm btn-secondary">처리완료</button></td>
                                 </tr>
                               </table>
                             </div>
                           </button>
                         </div>
                         <div class="endDiv">
-                          <button class="btn btn-primary">📝 새 수정요청</button>
+                          <button class="btn btn-primary">📝 근태 수정</button>
                           <!-- Basic Pagination 최대를 3으로 하던가ㅜㅜ-->
                           <div aria-label="Page navigation pageNav">
                             <ul class="pagination">
@@ -640,36 +705,51 @@
                         <h5 class="card-header" style="margin-bottom : 20px"><b>📝 근태 수정요청서 작성</b></h5>
                         <div class="card-body" style="width: 95%;">
                           <form id="formAccountSettings" method="POST" onsubmit="return false">
-                            <div class="row">
-                              <div class="mb-3 col-md-6">
-                                <label for="firstName" class="form-label">수정요청일</label>
-                                <input class="form-control" type="date" id="modifyDate" name="modifyDate" value="" autofocus required/>
-                              </div>
-                              <div class="mb-3 col-md-6">
-                                <label for="organization" class="form-label">수정요청 상태</label>
-                                <div style="height : 10px"></div>
-                                <input type="radio" name="change" value="workIn">&nbsp출근수정&nbsp&nbsp&nbsp&nbsp&nbsp
-                                <input type="radio" name="change" value="rest">&nbsp휴식수정&nbsp&nbsp&nbsp&nbsp&nbsp
-                                <input type="radio" name="change" value="workOut">&nbsp퇴근수정&nbsp&nbsp&nbsp&nbsp&nbsp
-                                <input type="radio" name="change" value="etc">&nbsp기타수정&nbsp&nbsp&nbsp&nbsp&nbsp
-                              </div>
-                              <div class="mb-3 col-md-12" style="margin-top: 20px;">
-                                <label for="address" class="form-label" >수정 요청사유</label><br>
-                                <textarea class="textarea" autofocus required></textarea>
-                              </div>
-                            </div>
-                            <div class="mt-2 btnDiv">
-                              <button type="submit" class="btn btn-primary me-2">직원등록</button>
-                              <button type="button" class="btn btn-secondary me-2">목록으로</button>
-                            </div>
+                            <table class="table table-hover detailForm">
+                              <thead>
+                                <tr>
+                                  <td colspan="6" class="profileTd">
+                                    <i class='bx bxs-user-circle'></i>
+                                    <span class="profileName"><b>홍길동</b></span>
+                                    <span class="profileName">트레이너</span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>수정요청일</td>
+                                  <td>출근시간</td>
+                                  <td>휴식시간</td>
+                                  <td>퇴근시간</td>
+                                  <td>총 근무시간</td>
+                                  <td>상태</td>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>2022/08/15</td>
+                                  <td>10:13:21</td>
+                                  <td>59:31</td>
+                                  <td>18:15:35</td>
+                                  <td>06:58:36</td>
+                                  <td>지각</td>
+                                </tr>
+                              </tbody>
+                            </table>
                           </form>
+                          <form class="mb-3 col-md-12 reason" style="margin-top: 20px;">
+                            <h5 class="card-header" style="margin-bottom : 20px"><b>🧾 출근수정사유</b></h5>
+                            <textarea class="textarea" autofocus required readonly>이미 작성된 구차한 변명</textarea>
+                          </form>
+                          <div class="mt-2 btnDiv">
+                            <button type="submit" class="btn btn-primary me-2">직원등록</button>
+                            <button type="button" class="btn btn-secondary me-2">목록으로</button>
+                          </div>
                         </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>    
+            </div>
           </div>
+        </div>
       </div>
       <!-- Overlay -->
       <div class="layout-overlay layout-menu-toggle"></div>
