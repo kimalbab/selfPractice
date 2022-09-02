@@ -3,10 +3,12 @@
 <!-- =========================================================
 * Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
 ==============================================================
+
 * Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
 * Created by: ThemeSelection
 * License: You must have a valid license purchased in order to legally use the theme for your project.
 * Copyright ThemeSelection (https://themeselection.com)
+
 =========================================================
  -->
 <!-- beautify ignore:start -->
@@ -92,8 +94,7 @@
             font-size: 12px;
         }
 
-      
-
+       
 
         /*여기서부터 개별 스타일*/
         .card-body{
@@ -104,7 +105,7 @@
         }
 
         .vacDetailDiv{
-          height: 709px;
+          height: 759px;
         }
 
         .card-header{
@@ -115,146 +116,76 @@
           align-items: center;
         }
         
-        
-
-        #todayWork{
-          width: 90%;
-          margin-top: 20px;
-          font-size: 12px;
-          text-align: center;
-          justify-content: center;
-          margin: auto;
-          align-items: center;
-        }
-
-
         .card-header{
           color: #696CFF;
         }
-
-        .simple{
-            height: 120px;
-            width: 95%;
-            margin: auto;
-            margin-top: 10px;
-            border-radius: 10px;
-            box-shadow: 0 0 0.375rem 0.25rem rgb(161 172 184 / 15%);
-            background-color: white;
-            border: none;
-            margin-left: 7px;
-        }
         
-        .simple *{
-          line-height:1.1;
-          align-items: center;
-          margin: auto;
-          text-align: center;
+
+        /* 채팅창 */
+        .chatMenu{
+          background-color: #E7E7FF;
+          height: 759px;
+          padding: 20px;
         }
 
-        .profileDiv{
-          margin-top: 10px;
+        .btnFlex{
+          display: flex;
         }
 
-        .bxs-user-circle, .bx-chevron-right{
-          font-size: 20px;
+        .btnFlex button {
+          background-color: #E7E7FF;
           color: #696CFF;
-        }
-
-        .profileName{
-          font-size: 14px;
-        }
-
-        .modifyList{
-          font-size: 12px;
-          padding: 3px;
-          margin-top: 10px;
-        }
-
-        .modifyList th{
-          text-align: left;
-          width:130px;
-          padding: 3px;
-        }
-        
-        .modifyList td{
-          text-align: right;
-          padding: 3px;
-        }
-
-        .endDiv {
-         width: 90%;
-         margin: auto;
-         text-align: center;
-        }
-
-        .endDiv button{
-          width: 82%;
-          margin-bottom: 20px;
-        }
-
-        .endDiv * {
-         box-sizing: border-box;
-        }
-
-        .pagination{
-         justify-content: center;
-         margin-bottom: 35px;
-        }
-
-
-        
-
-       
-        .detailForm thead{
-          color: #696CFF;
-          font-weight: 600;
-        }
-
-        .profileTd *{
-          font-size: 16px;
-          text-align: center;
-        }
-
-        .reason{
-          margin-top: 20px;
-          margin-bottom: 10px;
-          background-color: #f8f4fc;
-          height: 450px;
           border-radius: 10px;
-        }
-        
-        textarea{
-          resize: none;
-          margin-top: -10px;
-          width: 80%;
+          border: none;
           height: 80px;
-          border: 0.5px solid #696CFF;
-          border-radius: 7px;
-          padding: 5px;
-          margin-left: 100px;
+          padding-bottom: 20px;
         }
 
-        .btnDiv {
-          align-items: right;
-          margin: auto;
-          margin-top:80px;
-          justify-content: right;
-          display: flex;
-          padding:0px;
-        }
-
-        .submitDiv{
-          margin: auto;
-          margin-top: 20px;
-          width: 80%;
-          display: flex;
-        }
-
-        .submitDiv label{
+        .btnFlex button:hover {
+          background-color: white;
           color: #696CFF;
           font-weight: 600;
         }
 
+        .chatMenuForm{
+          background-color: white;
+          height: 680px;
+          border-radius: 10px;
+          margin-top: -15px;
+        }
+
+        .chatMenuForm table{
+          margin: auto;
+          width: 90%;
+          margin-top: 20px;
+        }
+
+        .chatMenuForm table td:nth-child(2){
+          color: #696CFF;
+          font-size: 15px;
+          font-weight: 600;
+        }
+
+        .chatMenuForm table td:nth-child(1){
+          font-size: 12px;
+          font-weight: 100;
+        }
+        .empList{
+          font-size: 13px;
+        }
+
+        ul{
+          list-style:none;
+        }
+
+        ul li {
+          font-size: 11px;
+        }
+
+        ul li b{
+          font-size: 13px;
+          color: #696CFF;
+        }
         
     </style>
   </head>
@@ -586,192 +517,94 @@
 
         
 
-    <div class="content-wrapper">
-      <div class="container-xxl flex-grow-1 container-p-y">
-        <div class="row">
+          <div class="content-wrapper">
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="row">
+                  <!-- 채팅메뉴 -->
+                  <div class="col-md-3">
+                    <div class="card mb-4 chatMenu">
+                      <div class="btnFlex">
+                        <button class="col-md-6" clicked>🙋‍♀️ MEMBER</button>
+                        <button class="col-md-6">💌 CHAT</button>
+                      </div>
+                      <form class="chatMenuForm">
+                        <table>
+                          <tr>
+                            <th rowspan="2">&nbsp&nbsp&nbsp<img src="sneat-1.0.0/assets/img/avatars/1.png" alt class="w-px-50 h-auto rounded-circle"/></th>
+                            <td>홍길동 트레이너</td>
+                          </tr>
+                          <tr>
+                            <td>🧘‍♂️ 대기중</td>
+                          </tr>
+                        </table>
 
-          <div class="col-xl-12">
-            <div class="nav-align-top mb-4">
-              <ul class="nav nav-pills mb-3 nav-fill" role="tablist">
-                <li class="nav-item">
-                  <button
-                    type="button"
-                    class="nav-link"
-                    role="tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#navs-pills-justified-messages"
-                    aria-controls="navs-pills-justified-messages"
-                    aria-selected="false"
-                  >
-                    📅 전직원 근태확인
-                  </button>
-                </li>
-                <li class="nav-item">
-                  <button
-                    type="button"
-                    class="nav-link"
-                    role="tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#navs-pills-justified-messages"
-                    aria-controls="navs-pills-justified-messages"
-                    aria-selected="false"
-                  >
-                    🎁 연차 관리 &nbsp&&nbsp 🎉 휴가 관리
-                  </button>
-                </li>
-                <li class="nav-item">
-                  <button
-                    type="button"
-                    class="nav-link active"
-                    role="tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#navs-pills-justified-home"
-                    aria-controls="navs-pills-justified-home"
-                    aria-selected="true"
-                  >
-                    📝 근태 수정
-                  </button>
-                </li>
-              </ul>
-              
-                <div class="row">
-                  <!-- 수정요청관리 -->
-                  <div class="col-md-2 ">
-                    <div class="card mb-4 vacDetailDiv">
-                        <h5 class="card-header"><b>⏰ 수정요청 타임라인</b></h5>
-                        <div class="card-body">
-                          <button class="simple">
-                            <div class="profileDiv">
-                              <i class='bx bxs-user-circle'></i>
-                              <span class="profileName"><b>홍길동</b></span>
-                              <span class="profileName">트레이너</span>
-                            </div>
-                            <div>
-                              <table class="modifyList">
-                                <tr>
-                                  <th>변경요청일</th>
-                                  <td>2022.08.16</td>
-                                </tr>
-                                <tr>
-                                  <th>비고</th>
-                                  <td>출근수정</td>
-                                </tr>
-                                <tr>
-                                  <td colspan="2" style="text-align:center"><button class="btn btn-sm btn-primary">처리하기</button></td>
-                                </tr>
-                              </table>
-                            </div>
-                          </button>
-                          <button class="simple">
-                            <div class="profileDiv">
-                              <i class='bx bxs-user-circle'></i>
-                              <span class="profileName"><b>홍길동</b></span>
-                              <span class="profileName">트레이너</span>
-                            </div>
-                            <div>
-                              <table class="modifyList">
-                                <tr>
-                                  <th>변경요청일</th>
-                                  <td>2022.08.16</td>
-                                </tr>
-                                <tr>
-                                  <th>비고</th>
-                                  <td>출근수정</td>
-                                </tr>
-                                <tr>
-                                  <td colspan="2" style="text-align:center"><button class="btn btn-sm btn-secondary">처리완료</button></td>
-                                </tr>
-                              </table>
-                            </div>
-                          </button>
-                        </div>
-                        <div class="endDiv">
-                          <button class="btn btn-primary">📝 근태 수정</button>
-                          <!-- Basic Pagination 최대를 3으로 하던가ㅜㅜ-->
-                          <div aria-label="Page navigation pageNav">
-                            <ul class="pagination">
-                              <li class="page-item prev">
-                                <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevron-left"></i></a>
-                              </li>
-                              <li class="page-item">
-                                <a class="page-link" href="javascript:void(0);">1</a>
-                              </li>
-                              <li class="page-item">
-                                <a class="page-link" href="javascript:void(0);">2</a>
-                              </li>
-                              <li class="page-item active">
-                                <a class="page-link" href="javascript:void(0);">3</a>
-                              </li>
-                              <li class="page-item next">
-                                <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevron-right"></i></a>
-                              </li>
-                            </ul>
+                        <!-- Search -->
+                        <div class="navbar-nav align-items-center" style="margin-top: 20px;">
+                          <div class="nav-item d-flex align-items-center">
+                            <i class="bx bx-search fs-4 lh-0"></i>
+                            <input type="text" class="form-control border-0 shadow-none" placeholder="Search..." aria-label="Search...">
                           </div>
-                          <!--/ Basic Pagination -->
                         </div>
+                        <!-- /Search -->
+
+                        <div>
+                          <ul class="empList">
+                            <li>관리자</li>
+                              <ul>
+                                <li><b>최사장</b> 🧘‍♂️ 대기중</li>
+                                <li><b>김부사장</b>  🏋️‍♂️ 수업중</li>
+                              </ul>
+                            <li>트레이너</li>
+                              <ul>
+                                <li><b>윤헬트</b>  🥗 휴식중</li>
+                                <li><b>박진진</b>  🧘‍♂️ 대기중</li>
+                                <li><b>이나나</b>  🧘‍♂️ 대기중</li>
+                                <li><b>최파파</b>  🧘‍♂️ 대기중</li>
+                              </ul>
+                          </ul>
+                        </div>
+                        
+                      </form>
                     </div>
-                    
                   </div>
+
                 
-                  <!-- 휴가관리 -->
-                  <div class="col-md-10 ">
+                  <!-- 채팅창 -->
+                  <div class="col-md-9 ">
                     <div class="card mb-4 vacDetailDiv">
-                        <h5 class="card-header"><b>📝 근태 수정요청안</b></h5>
+                        <h5 class="card-header" style="margin-bottom : 20px"><b>📝 근태 수정요청서 작성</b></h5>
                         <div class="card-body" style="width: 95%;">
                           <form id="formAccountSettings" method="POST" onsubmit="return false">
-                            <table class="table table-hover detailForm">
-                              <thead>
-                                <tr>
-                                  <td colspan="6" class="profileTd">
-                                    <i class='bx bxs-user-circle'></i>
-                                    <span class="profileName"><b>홍길동</b></span>
-                                    <span class="profileName">트레이너</span>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>수정요청일</td>
-                                  <td>출근시간</td>
-                                  <td>휴식시간</td>
-                                  <td>퇴근시간</td>
-                                  <td>총 근무시간</td>
-                                  <td>상태</td>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>2022/08/15</td>
-                                  <td>10:13:21</td>
-                                  <td>59:31</td>
-                                  <td>18:15:35</td>
-                                  <td>06:58:36</td>
-                                  <td>지각</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </form>
-                          <form class="mb-3 col-md-12 reason" style="margin-top: 15px;">
-                            <h5 class="card-header" style="margin-bottom : 15px"><b>🧾 출근수정사유</b></h5>
-                            <textarea class="textarea" autofocus readonly>이미 작성된 구차한 변명</textarea>
-                            <h5 class="card-header" style="margin-bottom : 15px"><b>📋 수정의견</b></h5>
-                            <textarea class="textarea" autofocus required>수정 의견을 적어주세요</textarea>
-                            <div class="row submitDiv">
-                              <div class="mt-2 btnDiv col-md-7">
-                                <label for="address" class="form-label" style="font-size: 10px; width:50px">수정시간</label>
-                                <input type="time" class="form-control" id="birth" name="birth" />
+                            <div class="row">
+                              <div class="mb-3 col-md-6">
+                                <label for="firstName" class="form-label">수정요청일</label>
+                                <input class="form-control" type="date" id="modifyDate" name="modifyDate" value="" autofocus required/>
                               </div>
-                              <div class="mt-2 btnDiv col-md-5">
-                                <button type="submit" class="btn btn-primary me-2">수정하기</button>
-                                <button type="button" class="btn btn-secondary me-2">반려하기</button>
+                              <div class="mb-3 col-md-6">
+                                <label for="organization" class="form-label">수정요청 상태</label>
+                                <div style="height : 10px"></div>
+                                <input class="form-check-input" type="radio" name="change" value="workIn">&nbsp출근수정&nbsp&nbsp&nbsp&nbsp&nbsp
+                                <input class="form-check-input" type="radio" name="change" value="rest">&nbsp휴식수정&nbsp&nbsp&nbsp&nbsp&nbsp
+                                <input class="form-check-input" type="radio" name="change" value="workOut">&nbsp퇴근수정&nbsp&nbsp&nbsp&nbsp&nbsp
+                                <input class="form-check-input" type="radio" name="change" value="etc">&nbsp기타수정&nbsp&nbsp&nbsp&nbsp&nbsp
                               </div>
+                              <div class="mb-3 col-md-12" style="margin-top: 20px;">
+                                <label for="address" class="form-label" >수정 요청사유</label><br>
+                                <textarea class="textarea" autofocus required></textarea>
+                              </div>
+                            </div>
+                            <div class="mt-2 btnDiv">
+                              <button type="submit" class="btn btn-primary me-2">직원등록</button>
+                              <button type="button" class="btn btn-secondary me-2">목록으로</button>
                             </div>
                           </form>
                         </div>
                     </div>
                   </div>
                 </div>
-            </div>
+              </div>
+            </div>    
           </div>
-        </div>
       </div>
       <!-- Overlay -->
       <div class="layout-overlay layout-menu-toggle"></div>
